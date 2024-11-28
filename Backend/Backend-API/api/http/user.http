@@ -1,0 +1,27 @@
+// Teste do endpoint dos usuários
+
+### Login
+# @prompt senha
+POST https://backend-api-7cos.onrender.com/auth
+Content-Type: application/json
+
+{
+  "email": "testehttp@teste.com",
+  "password": "{{senha}}"
+}
+
+### Registrar
+# @prompt senha
+POST https://backend-api-7cos.onrender.com/user
+Content-Type: application/json
+
+{
+  "username": "testehttp2",
+  "email": "testehttp@teste.com",
+  "password": "{{senha}}"
+}
+
+###Listar usuarios
+GET https://backend-api-7cos.onrender.com/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjZmYjliY2I1ZGY1ZmFmYmU5NzIxMCIsImVtYWlsIjoidGVzdGVodHRwQHRlc3RlLmNvbSIsImlhdCI6MTcxODAyNTEzOSwiZXhwIjoxNzE4MTExNTM5fQ.AbPm4fnKw6PZ2Z9QwiZolr98HeiqVVbtq7tQjJz-Jw4
+Content-Type: application/json

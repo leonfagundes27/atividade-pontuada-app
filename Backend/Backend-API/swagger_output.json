@@ -1,0 +1,296 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "https://backend-api-7cos.onrender.com",
+      "description": "Render Server"
+    },
+    {
+      "url": "http://localhost:3000",
+      "description": "Local Server"
+    }
+  ],
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+
+  "paths": {
+    "/courses": {
+      "get": {
+        "summary": "Buscar todos os cursos",
+        "responses": {
+          "200": {
+            "description": "Lista de todos os cursos"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cadastrar um novo curso",
+        "responses": {
+          "201": {
+            "description": "Curso criado com sucesso"
+          },
+          "400": {
+            "description": "Erro de requisição inválida"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      }
+    },
+    "/courses/{id}": {
+      "put": {
+        "summary": "Atualizar um curso existente",
+        "responses": {
+          "200": {
+            "description": "Curso atualizado com sucesso"
+          },
+          "400": {
+            "description": "Erro de requisição inválida"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar um curso existente",
+        "responses": {
+          "200": {
+            "description": "Curso deletado com sucesso"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      }
+    },
+    "/courses/filter": {
+      "get": {
+        "summary": "Filtrar cursos",
+        "parameters": [
+          {
+            "name": "nome",
+            "in": "query",
+            "description": "Nome do curso",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "modalidade",
+            "in": "query",
+            "description": "Modalidade do curso",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "coordenador",
+            "in": "query",
+            "description": "Nome do coordenador do curso",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de cursos filtrados"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      }
+    },
+    "/professors": {
+      "get": {
+        "summary": "Buscar todos os professores",
+        "responses": {
+          "200": {
+            "description": "Lista de todos os professores"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cadastrar um novo professor",
+        "responses": {
+          "201": {
+            "description": "Professor criado com sucesso"
+          },
+          "400": {
+            "description": "Erro de requisição inválida"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      }
+    },
+    "/professors/{id}": {
+      "put": {
+        "summary": "Atualizar um professor existente",
+        "responses": {
+          "200": {
+            "description": "Professor atualizado com sucesso"
+          },
+          "400": {
+            "description": "Erro de requisição inválida"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar um professor existente",
+        "responses": {
+          "200": {
+            "description": "Professor deletado com sucesso"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      }
+    },
+    "/professors/filter": {
+      "get": {
+        "summary": "Filtrar professores",
+        "parameters": [
+          {
+            "name": "nome",
+            "in": "query",
+            "description": "Nome do professor",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "cursos",
+            "in": "query",
+            "description": "IDs dos cursos associados ao professor",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "titulacoes",
+            "in": "query",
+            "description": "Titulações do professor",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de professores filtrados"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      }
+    },
+    "/users": {
+      "post": {
+        "summary": "Cadastrar um novo usuário",
+        "responses": {
+          "201": {
+            "description": "Usuário criado com sucesso"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      },
+      "get": {
+        "summary": "Buscar todos os usuários",
+        "responses": {
+          "200": {
+            "description": "Lista de todos os usuários"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "summary": "Realizar login",
+        "responses": {
+          "200": {
+            "description": "Login bem-sucedido"
+          },
+          "400": {
+            "description": "Credenciais inválidas"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      }
+    },
+    "/user/{nome}": {
+      "get": {
+        "summary": "Buscar usuário pelo nome",
+        "parameters": [
+          {
+            "name": "nome",
+            "in": "path",
+            "description": "Nome do usuário",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuário encontrado"
+          },
+          "400": {
+            "description": "Erro de requisição inválida"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      }
+    },
+    "/professor/{nome}": {
+      "get": {
+        "summary": "Buscar professor pelo nome",
+        "parameters": [
+          {
+            "name": "nome",
+            "in": "path",
+            "description": "Nome do professor",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Professor encontrado"
+          },
+          "400": {
+            "description": "Erro de requisição inválida"
+          },
+          "500": {
+            "description": "Erro do servidor"
+          }
+        }
+      }
+    }
+  }
+}

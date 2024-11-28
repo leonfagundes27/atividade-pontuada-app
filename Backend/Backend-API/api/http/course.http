@@ -1,0 +1,38 @@
+
+### Listar cursos
+GET https://backend-api-7cos.onrender.com/course
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjZlZTlhY2I1ZGY1ZmFmYmU5NzEzZiIsImVtYWlsIjoibmV3dXNlckBleGFtcGxlLmNvbSIsImlhdCI6MTcxODAyMzEyOSwiZXhwIjoxNzE4MTA5NTI5fQ.njfiSjD5glZKehAc_jAuOHPRYc29oOZlXhT57wFKFJA
+
+### Cadastrar curso
+POST https://backend-api-7cos.onrender.com/course
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjZlZTlhY2I1ZGY1ZmFmYmU5NzEzZiIsImVtYWlsIjoibmV3dXNlckBleGFtcGxlLmNvbSIsImlhdCI6MTcxODAyMzEyOSwiZXhwIjoxNzE4MTA5NTI5fQ.njfiSjD5glZKehAc_jAuOHPRYc29oOZlXhT57wFKFJA
+
+{
+  "nome": "Novo Curso",
+  "codCourse": "123",
+  "disciplinas": ["Disciplina 1", "Disciplina 2"],
+  "sigla": "NC",
+  "modalidade": "Presencial",
+  "coordenador": "Nome do Coordenador"
+}
+
+### Atualizar curso (Trocar id ao fazer um novo teste)
+PUT https://backend-api-7cos.onrender.com/course/6666f940cb5df5fafbe971e5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjZlZTlhY2I1ZGY1ZmFmYmU5NzEzZiIsImVtYWlsIjoibmV3dXNlckBleGFtcGxlLmNvbSIsImlhdCI6MTcxODAyMzEyOSwiZXhwIjoxNzE4MTA5NTI5fQ.njfiSjD5glZKehAc_jAuOHPRYc29oOZlXhT57wFKFJA
+
+{
+  "nome": "Novo Curso alterado",
+  "codCourse": "123",
+  "disciplinas": ["Disciplina 0", "Disciplina 2"],
+  "sigla": "NCA",
+  "modalidade": "Presencial",
+  "coordenador": "Nome do Coordenador"
+}
+
+
+
+###delete (trocar id ao fazer novo teste)
+DELETE https://backend-api-7cos.onrender.com/course/6666f940cb5df5fafbe971e5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjZlZTlhY2I1ZGY1ZmFmYmU5NzEzZiIsImVtYWlsIjoibmV3dXNlckBleGFtcGxlLmNvbSIsImlhdCI6MTcxODAyMzEyOSwiZXhwIjoxNzE4MTA5NTI5fQ.njfiSjD5glZKehAc_jAuOHPRYc29oOZlXhT57wFKFJA

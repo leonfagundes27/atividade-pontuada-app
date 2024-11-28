@@ -1,0 +1,37 @@
+{
+  "name": "piss-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api/app.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./api/app.js",
+    "dev": "nodemon ./api/app.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mvc",
+    "mongodb"
+  ],
+  "author": "Leon Fagundes",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.2",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "supertest": "^7.0.0"
+  }
+}

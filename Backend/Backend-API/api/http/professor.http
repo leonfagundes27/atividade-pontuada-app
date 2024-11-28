@@ -1,0 +1,44 @@
+##Listar
+GET https://backend-api-7cos.onrender.com/professors
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjZlZTlhY2I1ZGY1ZmFmYmU5NzEzZiIsImVtYWlsIjoibmV3dXNlckBleGFtcGxlLmNvbSIsImlhdCI6MTcxODAyMzEyOSwiZXhwIjoxNzE4MTA5NTI5fQ.njfiSjD5glZKehAc_jAuOHPRYc29oOZlXhT57wFKFJA
+
+###registrar professor
+POST https://backend-api-7cos.onrender.com/professors
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjZlZTlhY2I1ZGY1ZmFmYmU5NzEzZiIsImVtYWlsIjoibmV3dXNlckBleGFtcGxlLmNvbSIsImlhdCI6MTcxODAyMzEyOSwiZXhwIjoxNzE4MTA5NTI5fQ.njfiSjD5glZKehAc_jAuOHPRYc29oOZlXhT57wFKFJA
+Content-Type: application/json
+
+{
+  "nome": "Professor Example",
+  "matriculaId": "12345",
+  "unidadeId": "67890",
+  "titulacao": "Doutor",
+  "referencia": "Referência Exemplo",
+  "lattes": "http://lattes.cnpq.br/1234567890",
+  "coursesId": ["60c72b2f9b1e8e3d1c8e4bff", "60c72b2f9b1e8e3d1c8e4bfe"],
+  "email": "professor@example.com",
+  "statusAtividade": "Ativo",
+  "notes": "Nenhuma observação"
+}
+
+### Atualizar professor (trocar id ao fazer novo teste)
+PUT https://backend-api-7cos.onrender.com/professors/6666f455cb5df5fafbe971af
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjZlZTlhY2I1ZGY1ZmFmYmU5NzEzZiIsImVtYWlsIjoibmV3dXNlckBleGFtcGxlLmNvbSIsImlhdCI6MTcxODAyMzEyOSwiZXhwIjoxNzE4MTA5NTI5fQ.njfiSjD5glZKehAc_jAuOHPRYc29oOZlXhT57wFKFJA
+Content-Type: application/json
+
+{
+  "nome": "Professor Example Updated",
+  "matriculaId": "12345",
+  "unidadeId": "67890",
+  "titulacao": "Doutor",
+  "referencia": "Referência Atualizada",
+  "lattes": "http://lattes.cnpq.br/1234567890",
+  "coursesId": ["60c72b2f9b1e8e3d1c8e4bff", "60c72b2f9b1e8e3d1c8e4bfe"],
+  "email": "professorupdated@example.com",
+  "statusAtividade": "Ativo",
+  "notes": "Observação atualizada"
+}
+
+
+###delete (trocar id ao fazer novo teste)
+DELETE https://backend-api-7cos.onrender.com/professors/6666f455cb5df5fafbe971af
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjZlZTlhY2I1ZGY1ZmFmYmU5NzEzZiIsImVtYWlsIjoibmV3dXNlckBleGFtcGxlLmNvbSIsImlhdCI6MTcxODAyMzEyOSwiZXhwIjoxNzE4MTA5NTI5fQ.njfiSjD5glZKehAc_jAuOHPRYc29oOZlXhT57wFKFJA
