@@ -18,3 +18,9 @@ Este projeto teve como finalidade o desenvolvimento de um aplicativo voltado par
 - **Listagem**: Veja todas as tarefas, incluindo título e status atual.
 - **Editar e Remover**: Alterações e exclusões de tarefas são suportadas.
 - **Validação**: Evita envio de dados incompletos nos formulários.
+
+### Imagens 🤳
+<img src="https://github.com/leonfagundes27/atividade-pontuada-app/blob/main/images/6a8d662c-c1ec-43d0-9610-c559fa42ba25.jpg?raw=true" alt="Minha Imagem" width="200" />
+<img src="https://github.com/leonfagundes27/atividade-pontuada-app/blob/main/images/c3f3ca15-d02b-4e19-a61f-0426245353d0.jpg?raw=true" alt="Minha Imagem" width="200" />
+
+
